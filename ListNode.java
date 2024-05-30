@@ -1,6 +1,4 @@
-
-
- public class ListNode{
+public class ListNode{
     int data;
   ListNode next;
 
@@ -12,25 +10,8 @@
     
  }
 
- 
-    
-  
-
-
-
-
 class DelEement{
 
-    static int length(ListNode head)
-    {
-      ListNode temp = head;
-      int count = 0;
-      while (temp != null) {
-        count++;
-        temp = temp.next;
-      }
-      return count;
-    }
 
     static void printList(ListNode head)
     {
