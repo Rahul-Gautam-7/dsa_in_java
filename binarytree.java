@@ -29,6 +29,8 @@ public class binarytree{
             return newnode;
         }
     }
+
+    //preorder taversal in binary tree
     public static void preorder(Node root)
     {
         if(root == null)
@@ -39,11 +41,45 @@ public class binarytree{
         preorder(root.left);
         preorder(root.right);
     }
+
+    //inorder taversal in binary tree
+    public static void inorder(Node root)
+    {
+        if(root == null)
+        {
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.data+" ");
+        inorder(root.right);
+    }
+
+    //postorder taversal in binary tree
+    public static void postorder(Node root)
+    {
+        if(root == null)
+        {
+            return;
+        }
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.data+" ");
+    }
     public static void main(String[] args) {
 
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTreee b = new BinaryTreee();
         Node root = b.buildtree(nodes);
-       preorder(root);      
+
+       System.out.println("preorder");
+       preorder(root);
+       System.out.println();
+       System.out.println("Inorder");
+       System.out.println();
+       inorder(root); 
+       System.out.println();
+       System.out.println("post order"); 
+       postorder(root);    
+
     }
 }
