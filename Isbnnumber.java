@@ -14,7 +14,7 @@ public class Isbnnumber {
             i++;
             
         }
-        System.out.println(sum);
+  
         if(sum%11 == 0)
         {
             System.out.println("The number is ISBN number ");
